@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryDark">#29508E</color>
+    <color name="green">#006F4E</color>
+    <color name="greenSuccess">#4CB840</color>
+    <color name="greenRadio">#76CF6B</color>
+    <color name="greenRadioRadial">#64BB5A</color>
+    <color name="gray100">#F5F5F5</color>
+    <color name="gray200">#EEEEEE</color>
+    <color name="gray300">#E0E0E0</color>
+    <color name="gray400">#BDBDBD</color>
+    <color name="gray600">#757575</color>
+    <color name="gray800">#424242</color>
+    <color name="gray700">#616161</color>
+    <color name="gray900">#212429</color>
+    <color name="primary">#3968A6</color>
+    <color name="orange">#FF9C11</color>
+    <color name="red">#D23727</color>
+</resources>

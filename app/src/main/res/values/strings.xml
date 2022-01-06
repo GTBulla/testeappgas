@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AppGas</string>
+    <string name="order_top_bar_title">Acompanhar pedido</string>
+    <string name="order_estimated_time">Tempo estimado</string>
+    <string name="order_status_title_received_your_order">Recebemos o seu pedido</string>
+    <string name="order_status_description_received_your_order">A revenda pode levar até 5\n minutos para confirmar o pedido</string>
+    <string name="button_chat">\tChat</string>
+    <string name="order_delivery">Entregar em</string>
+    <string name="order_untraceable_delivery">Esta entrega não é rastreável</string>
+    <string name="order_resume_title">Resumo do pedido</string>
+    <string name="order_id">Pedido #555</string>
+    <string name="gas_total">Gás Total</string>
+    <string name="order_payment_type_debt_on_delivery">Débito na entrega</string>
+    <string name="order_payment">Pagamento</string>
+    <string name="order_discount_coupon">Cupom</string>
+    <string name="order_total">Total</string>
+    <string name="button_talk_to_dealer">FALAR COM A REVENDA</string>
+    <string name="button_more_actions">MAIS AÇÕES</string>
+    <string name="button_close">Fechar</string>
+</resources>
+
+

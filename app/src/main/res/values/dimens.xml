@@ -1,0 +1,37 @@
+<resources>
+    <!--GENERAL-->
+    <dimen name="zero">0dp</dimen>
+    <dimen name="margin_element">16dp</dimen>
+
+    <!--FONT SIZE-->
+    <dimen name="top_bar_font_size">16sp</dimen>
+    <dimen name="header_size">14sp</dimen>
+    <dimen name="action_font_size_minor">12sp</dimen>
+    <dimen name="sub_header_size">12sp</dimen>
+    <dimen name="body_size">14sp</dimen>
+    <dimen name="body_size_two">13sp</dimen>
+    <dimen name="font_size_extra_small">10sp</dimen>
+    <dimen name="font_size_small">11sp</dimen>
+    <dimen name="button_font_size">12sp</dimen>
+    <dimen name="thumb_font_size_small">7sp</dimen>
+    <dimen name="background_alert_font_size">24sp</dimen>
+
+    <!--IMAGE ACTION-->
+    <dimen name="icon_action_side">16dp</dimen>
+    <dimen name="icon_action_margin_vertical">20dp</dimen>
+    <dimen name="icon_action_margin_horizontal">16dp</dimen>
+
+    <!--BUTTON-->
+    <dimen name="button_corner_height">44dp</dimen>
+    <dimen name="button_corner_margin_side">50dp</dimen>
+    <dimen name="button_corner_margin_side_small">15dp</dimen>
+    <dimen name="button_margin_top">14dp</dimen>
+    <dimen name="button_elevation">2dp</dimen>
+    <dimen name="button_translationZ">2dp</dimen>
+    <dimen name="button_radius">300dp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="button_inactive_height">80dp</dimen>
+    <dimen name="button_radius_minor">5dp</dimen>
+    <dimen name="button_border_minor">1dp</dimen>
+
+</resources>

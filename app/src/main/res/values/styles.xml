@@ -1,0 +1,44 @@
+<resources>
+
+    <style name="TopBarFont">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/top_bar_font_size</item>
+    </style>
+
+    <style name="TopicTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/primaryDark</item>
+        <item name="android:textSize">@dimen/header_size</item>
+    </style>
+    <style name="SubTitle">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/gray800</item>
+        <item name="android:textSize">@dimen/sub_header_size</item>
+    </style>
+
+    <style name="CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="buttonCompat">@drawable/checkbox_selector</item>
+        <item name="android:checked">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
+    <style name="ButtonBase">
+        <item name="android:layout_height">@dimen/button_corner_height</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/button_font_size</item>
+        <item name="android:background">@drawable/secondary_button</item>
+    </style>
+    <style name="ButtonPrimary" parent="ButtonBase">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="ButtonSecondary" parent="ButtonBase">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+</resources>

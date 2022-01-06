@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <br.com.gtb.interview.appgas.widget.CustomTopBarLayout
+        android:id="@+id/custom_top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/order_top_bar_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="54dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_top_bar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/margin_element">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_estimated_time_title"
+                style="@style/TopicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_estimated_time"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_estimated_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="15:21  -  15:42"
+                android:textColor="@color/gray700"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <br.com.gtb.interview.appgas.widget.OrderStateFlowLayout
+                android:id="@+id/order_state_flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_element"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_estimated_time_title" />
+
+            <LinearLayout
+                android:id="@+id/order_state_description_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_element"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_state_flow_layout">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/check_point"
+                    style="@style/CheckBox"
+                    android:layout_width="16dp"
+                    android:checked="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_element"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_order_status_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/order_status_title_received_your_order"
+                        android:textColor="@color/gray900"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_order_status_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/order_status_description_received_your_order"
+                        android:textColor="@color/gray600"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_chat"
+                    style="@style/ButtonSecondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_corner_height"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="@dimen/button_corner_margin_side_small"
+                    android:text="@string/button_chat"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    app:drawableLeftCompat="@drawable/question_answer"
+                    app:backgroundTint="@null" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/order_delivery_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_element"
+                android:background="@drawable/card_top_radius"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_element"
+                android:paddingRight="@dimen/margin_element"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_state_description_layout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_order_delivery_title"
+                    style="@style/TopicTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/order_delivery" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_order_delivery_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:paddingBottom="20dp"
+                    android:text="Avenida Borges de Medeiros, 3200 \nPraia de Belas • 1400"
+                    android:textColor="@color/gray600"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/order_delivery_bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bottom_radius"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_element"
+                android:paddingRight="@dimen/margin_element"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_delivery_top_layout">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_order_delivery_alert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingBottom="8dp"
+                    android:text="@string/order_untraceable_delivery"
+                    android:textColor="@color/gray600"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    app:srcCompat="@drawable/help"
+                    app:tint="@color/gray600" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_resume_title"
+                style="@style/TopicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/order_resume_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_delivery_bottom_layout" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_resume_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/badge_radius"
+                android:backgroundTint="@color/primary"
+                android:fontFamily="@font/poppins_regular"
+                android:paddingLeft="6dp"
+                android:paddingTop="2dp"
+                android:paddingRight="6dp"
+                android:paddingBottom="2dp"
+                android:text="@string/order_id"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/order_delivery_bottom_layout" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_rating_gas_total_title"
+                style="@style/TopicTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_element"
+                android:text="@string/gas_total"
+                android:textColor="@color/gray900"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_resume_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_rating_gas_total_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_element"
+                android:fontFamily="@font/poppins_medium"
+                android:text="4,5"
+                android:textColor="@color/gray600"
+                android:textSize="12sp"
+                app:layout_constraintRight_toLeftOf="@+id/star"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_resume_value" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="19dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/text_order_rating_gas_total_value"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_resume_value"
+                app:srcCompat="@drawable/star" />
+
+            <View
+                android:id="@+id/line_after_gas_total"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_element"
+                android:background="@color/gray300"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_rating_gas_total_title" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_item"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/white"
+                android:clipToPadding="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_after_gas_total"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="2"
+                tools:listitem="@layout/order_list_item" />
+
+            <View
+                android:id="@+id/line_after_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/margin_element"
+                android:background="@color/gray300"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/list_item" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_payment_title"
+                style="@style/SubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_element"
+                android:text="@string/order_payment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_after_list_item" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_payment_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_element"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/order_payment_type_debt_on_delivery"
+                android:textColor="@color/gray600"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_after_list_item" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_discount_coupon_title"
+                style="@style/SubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/order_discount_coupon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_payment_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_discount_coupon_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="-R$ 44,00"
+                android:textColor="@color/greenSuccess"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_payment_value" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_total_title"
+                style="@style/SubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/order_total"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_discount_coupon_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_order_total_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="R$ 200,00"
+                android:textColor="@color/gray700"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_discount_coupon_value" />
+
+            <Button
+                android:id="@+id/button_talk_to_dealer"
+                style="@style/ButtonPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_corner_height"
+                android:layout_marginTop="@dimen/margin_element"
+                android:layout_marginBottom="@dimen/margin_element"
+                android:paddingLeft="90dp"
+                android:paddingRight="@dimen/button_corner_margin_side_small"
+                android:text="@string/button_talk_to_dealer"
+                android:textAlignment="textStart"
+                app:drawableLeftCompat="@drawable/phone"
+                app:layout_constraintTop_toBottomOf="@+id/text_order_total_title" />
+
+            <Button
+                android:id="@+id/button_more_actions"
+                style="@style/ButtonSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_corner_height"
+                android:layout_marginTop="@dimen/margin_element"
+                android:layout_marginBottom="@dimen/margin_element"
+                android:background="@drawable/secondary_button"
+                android:text="@string/button_more_actions"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@+id/button_talk_to_dealer" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
